@@ -16,6 +16,6 @@ export default async function changeVidSrc(
 				.filter((x) => x.quality !== 'auto' && x.quality !== 'default')
 				.sort((a, b) => parseInt(b.quality) - parseInt(a.quality))[0]?.url ?? '';
 	}
-	artRef.switchUrl('https://m3u8.streamsora.live/proxy/m3u8/' + encodeURIComponent(url));
+	artRef.switchUrl(url);
 	return episode;
 }

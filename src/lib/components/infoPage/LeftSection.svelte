@@ -134,13 +134,13 @@
 				if (!selectedEpisode) return;
 				const continueWatch = get(continueWatching);
 				const image =
-					'https://wsrv.nl/?url=https://proxy.vnxservers.com/' +
+					'https://wsrv.nl/?url=' +
 					(selectedEpisode[currentEpisode].img
 						? selectedEpisode[currentEpisode].img
 						: data.info.fanart
 						? getLargeFanart(data.info.fanart)
 						: getLargePoster(data.info.poster)) +
-					'&w=300&h=106&output=webp';
+					'&w=150&h=106&output=webp';
 				const info = {
 					simkl_id: data.info.ids.simkl,
 					anime_title: data.info.title,
@@ -259,9 +259,7 @@
 		<Select id="countries" items={providersList} class="m-2" bind:value={selected} placeholder="" />
 		<Select id="subDub" items={subDub} class="m-2" bind:value={selectedSubOrDub} placeholder="" />
 	</div>
-	{#if value == 1}
-		<!-- 320x 85 -->
-		<!-- https://wsrv.nl/?url=https://proxy.vnxservers.com/https://artworks.thetvdb.com/banners/v4/episode/9704254/screencap/643c3b0c3c74a.jpg&w=150&h=86&output=webp -->
+	{#if value === 1}
 		<section class="px-1 w-full mt-1 flex justify-center">
 			<ul class="w-full h-64 lg:h-[540px] 2xl:h-[680px] overflow-y-auto border border-slate-800">
 				{#if selectedEpisode}
@@ -309,13 +307,13 @@
 									<div class="relative">
 										<img
 											class="object-fill aspect-video h-20 min-w-[125px] lg:min-w-[100px] 2xl:min-w-[140px] relative opacity-90"
-											src={'https://wsrv.nl/?url=https://proxy.vnxservers.com/' +
+											src={'https://wsrv.nl/?url=' +
 												(selectedEpisode[index].img
 													? selectedEpisode[index].img
 													: data.info.fanart
 													? getLargeFanart(data.info.fanart)
 													: getLargePoster(data.info.poster)) +
-												'&w=300&h=106&output=webp'}
+												'&w=150&h=106&output=webp'}
 											alt=""
 											srcset=""
 										/>

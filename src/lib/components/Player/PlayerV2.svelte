@@ -79,7 +79,7 @@
 		}
 
 		if (artRef) {
-			artRef.switchUrl('https://m3u8.streamsora.live/proxy/m3u8/' + encodeURIComponent(url));
+			artRef.switchUrl(url);
 			artRef.poster =
 				'//wsrv.nl/?url=' +
 				episodes[currentEpisode].image +
@@ -89,7 +89,7 @@
 
 		artRef = new Artplayer({
 			container: '.kato-player',
-			url: 'https://m3u8.streamsora.live/proxy/m3u8/' + encodeURIComponent(url),
+			url: url,
 			type: 'm3u8',
 			pip: true,
 			poster:

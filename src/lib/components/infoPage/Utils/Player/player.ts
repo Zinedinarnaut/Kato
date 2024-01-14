@@ -287,7 +287,7 @@ export async function changeVidSrc(
 				.sort((a, b) => parseInt(b.quality) - parseInt(a.quality))[0]?.url ?? '';
 	}
 
-	await artRef.switchUrl('https://m3u8.streamsora.live/proxy/m3u8/' + encodeURIComponent(url));
+	await artRef.switchUrl(url);
 
 	return episode;
 }
@@ -369,7 +369,7 @@ export async function changeVidSrcAnify(
 				.sort((a, b) => parseInt(b.quality) - parseInt(a.quality))[0]?.url ?? '';
 	}
 
-	await artRef.switchUrl('https://m3u8.streamsora.live/proxy/m3u8/' + encodeURIComponent(url));
+	await artRef.switchUrl(url);
 
 	return episode;
 }

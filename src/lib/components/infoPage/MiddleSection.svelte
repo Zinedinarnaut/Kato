@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import {onMount} from 'svelte';
+	import {getArtRef, initPlayer} from './Utils/Player/player';
+	import {autoSkip, settings} from '$lib/stores';
+	import {browser} from '$app/environment';
+	import type {Info} from '$lib/simkl/types';
+	import type {Writable} from 'svelte/store';
 
 	let countdown: any;
 	let nextEpisode: any;
-	import { getArtRef, initPlayer } from './Utils/Player/player';
-	import { autoSkip, settings } from '$lib/stores';
-	import { browser } from '$app/environment';
-	import type { Info } from '$lib/simkl/types';
-	import type { Writable } from 'svelte/store';
 	export let data: {
 		info: Info;
 		nextEpisodeDate: Date | undefined;
@@ -29,9 +29,7 @@
 
 	const getNextEpisodeDate = (data: any) => {
 		const targetDate = new Date(data.nextEpisodeDate);
-		const formattedTargetDate = targetDate.toLocaleString('en-US');
-
-		return formattedTargetDate;
+		return targetDate.toLocaleString('en-US');
 	};
 
 	const updateCountdown = () => {
@@ -250,7 +248,7 @@
 		</li>
 	</ul>
 </div>
-{#if data.info.status != 'ended' && data.nextEpisodeDate != null}
+{#if data.info.status !== 'ended' && data.nextEpisodeDate != null}
 	<div class="w-full mt-2 px-2 hidden lg:block rounded-md py-3 bg-secondary-600/50">
 		<svg
 			class="hi-mini h hi-bell inline-block w-4 h-4"

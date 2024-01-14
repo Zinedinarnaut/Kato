@@ -1,0 +1,20 @@
+export enum cGenres {
+	Action = 'Action',
+	Adventure = 'Adventure',
+	Cars = 'Cars',
+	Comedy = 'Comedy',
+	Drama = 'Drama',
+	Fantasy = 'Fantasy',
+	Horror = 'Horror',
+	MahouShoujo = 'Mahou Shoujo',
+	Mecha = 'Mecha',
+	Music = 'Music',
+	Mystery = 'Mystery',
+	Psychological = 'Psychological',
+	Romance = 'Romance',
+	SciFi = 'Sci-Fi',
+	SlifeOfLife = 'Slice of Life',
+	Sports = 'Sports',
+	Supernatural = 'Supernatural',
+	Thriller = 'Thriller'
+}

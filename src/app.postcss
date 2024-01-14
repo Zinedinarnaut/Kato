@@ -1,0 +1,75 @@
+@font-face {
+	/* Reference name */
+	font-family: 'Inter';
+	/* For multiple files use commas, ex: url(), url(), ... */
+	src: url('/fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+/*place global styles here */
+html,
+body {
+	@apply h-full;
+}
+/* font */
+@font-face {
+	font-family: 'onsenJapan';
+	src: url('/fonts/asianimport.ttf') format('truetype');
+	font-display: swap;
+}
+#artplayer-app .art-bottom {
+	display: none !important;
+}
+#artplayer-app .art-icon {
+	display: none !important;
+}
+.dark body {
+	background-color: #12111a !important;
+}
+a {
+	text-decoration: none !important;
+}
+.splide {
+	padding: 0 !important;
+}
+a:not(.unstyled):not(.permalink):is(:not(.prose *)):not(.btn):not(.btn-icon):not(.app-bar a):not(
+		.logo-item
+	):not(a.card):not(.list-nav a):hover {
+	filter: none;
+}
+/* 
+div > #splide01-track {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+} */
+div > * .splide__list {
+	padding: 4px !important;
+}
+.paginator-select {
+	display: none !important;
+}
+video {
+	z-index: 1 !important;
+}
+.art-video-player {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.art-video-player .art-subtitle {
+	color: white !important;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+	line-height: 1.5 !important;
+	font-weight: 600 !important;
+	text-align: center !important;
+	font-family: 'Lato', sans-serif !important;
+	background-color: rgba(0, 0, 0, 0.5) !important;
+	padding: 10px !important;
+	border-radius: 10px !important;
+	justify-self: center !important;
+	width: auto !important;
+}
+
+.art-video-player .art-subtitle:empty {
+	all: unset;
+	display: none !important;
+}

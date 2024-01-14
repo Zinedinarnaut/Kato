@@ -7,7 +7,7 @@ class ApiClient {
 
 	constructor(
 		baseURL = 'https://api.simkl.com/',
-		clientID = '33bf57bc753baf63317d1919ccd3476fb7c6d598665b09860c8415f6cfef1a83',
+		clientID = '05ac070ae1812dbefbec68026847298808a2bf3d50fbfd1b5259efab1a911488',
 		clientIdName = 'client_id'
 	) {
 		this.baseURL = baseURL;

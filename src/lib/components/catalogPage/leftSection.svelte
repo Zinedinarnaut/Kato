@@ -10,13 +10,13 @@
 	const animeGenres: cGenres[] = Object.values(cGenres); // Returns an array of all the enum values
 
 	const seasonValues = Object.values(cSeason); // Returns an array of all the enum values
-	const animeSeasons: cSeason[] = seasonValues.filter((value) => typeof value === 'string');
+	const animeSeasons: cSeason[] = seasonValues.filter((value) => true);
 
 	const formatValues = Object.values(cFormat); // Returns an array of all the enum values
-	const animeFormats: string[] = formatValues.filter((value) => typeof value === 'string');
+	const animeFormats: string[] = formatValues.filter((value) => true);
 
 	const statusValues = Object.values(cStatus); // Returns an array of all the enum values
-	const animeStatus: string[] = statusValues.filter((value) => typeof value === 'string');
+	const animeStatus: string[] = statusValues.filter((value) => true);
 
 	export let config: SearchConfig;
 	let genres: cGenres[] = [];
@@ -91,7 +91,7 @@
 							<input
 								class="checkbox checked:variant-filled-primary"
 								type="checkbox"
-								checked={genres.includes(genre) ? true : false}
+								checked={genres.includes(genre)}
 								on:change={changeGenres}
 								value={genre}
 							/>
@@ -134,16 +134,6 @@
 			</div></svelte:fragment
 		>
 	</AccordionItem>
-	<!-- <AccordionItem>
-		<svelte:fragment slot="summary"><p class="font-bold">Studio</p></svelte:fragment>
-		<svelte:fragment slot="content">
-			<select class="select">
-				{#each animeStudios as studio, i}
-					<option value={i}>{studio}</option>
-				{/each}
-			</select>
-		</svelte:fragment>
-	</AccordionItem> -->
 	<AccordionItem>
 		<svelte:fragment slot="summary"><p class="font-bold">Type</p></svelte:fragment>
 		<svelte:fragment slot="content">

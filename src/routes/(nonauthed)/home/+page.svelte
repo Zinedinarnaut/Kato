@@ -2,7 +2,6 @@
 	export let data;
 	let collections: ICollection[] = data.collections;
 	import Carousel from '$lib/components/Carousel.svelte';
-	// import Artplayer from 'artplayer';
 	import '@splidejs/svelte-splide/css/sea-green';
 	import SvelteSeo from 'svelte-seo';
 	import { onMount } from 'svelte';
@@ -21,7 +20,7 @@
 	import { browser } from '$app/environment';
 	import { checkSession } from '$lib/utils/checkForFirstVisit.js';
 	import ContuineWatchingCard from '$lib/components/contuineWatchingCard.svelte';
-	let gridData: Show[] = data.trending.slice(0, 20);
+	let gridData: Show[] = data.trending.slice(0, 27);
 	let visible: boolean = true;
 	$: gridData;
 	const watching: Show[] = [];
@@ -197,7 +196,7 @@
 						rewind: true,
 						// @ts-ignore
 						perPage: 'auto',
-						// wheel: true,
+					    wheel: true,
 						lazyLoad: 'sequential',
 						gap: '1rem',
 						focus: 0,
@@ -247,7 +246,7 @@
 				class="flex flex-wrap justify-start min-[1300px]:grid gap-5 pl-5 max-[700px]:pl-0 max-[700px]:grid lg:pl-0 wrapper mt-10"
 			>
 				{#each gridData as anime}
-					{#if anime.ids != null}
+					{#if anime.ids !== null}
 						<div class="" in:fly={{ y: 250, duration: 500 }}>
 							<ItemCard {anime} />
 						</div>
@@ -258,7 +257,7 @@
 			<button
 				type="button"
 				on:click={() => {
-					gridData = gridData.concat(data.trending.slice(gridData.length, gridData.length + 10));
+					gridData = gridData.concat(data.trending.slice(gridData.length, gridData.length + 20));
 				}}
 				class="btn-sm flex items-center text-center gap-1 md:btn lg:w-[91%] w-full lg:ml-[75px] font-medium variant-filled-surface bg-primary-hover-token scale-105 rounded-lg md:rounded-lg"
 				>Show More</button

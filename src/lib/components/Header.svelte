@@ -284,21 +284,6 @@
 		</div>
 	</svelte:fragment>
 	<svelte:fragment slot="trail">
-		<!-- Input with Icon prepend (large) -->
-		<a href="https://discord.gg/kato" class="hover:animate-spin">
-			<img
-				src="https://www.freepnglogos.com/uploads/discord-logo-png/concours-discord-cartes-voeux-fortnite-france-6.png"
-				class="w-10"
-				alt=""
-				srcset=""
-			/>
-		</a>
-		<a
-			href="/support"
-			class="btn-sm lg:btn mr-3 md:mr-0 variant-filled-error !rounded-md max-[700px]:hidden"
-			>Donate</a
-		>
-
 		<div class="space-y-1">
 			<div class="relative">
 				<div

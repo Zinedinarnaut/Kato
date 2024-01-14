@@ -27,7 +27,7 @@
 		}
 
 		trending = (await getAnilistAdvancedSearch(config)).results;
-		sort();
+		await sort();
 	};
 
 	onMount(() => {
@@ -47,7 +47,7 @@
 				const newTrending = (await getAnilistAdvancedSearch(config)).results;
 				trending = [...trending, ...newTrending];
 
-				sort();
+				await sort();
 
 				setTimeout(() => {
 					isLoading = false;
@@ -140,7 +140,7 @@
 		<div class="grid grid-cols-1 lg:grid-cols-12 2xl:gap-4">
 			<!-- Main Content -->
 			<!-- Side content -->
-			<!-- 
+			<!--
 				Visibility on mobile
 					Closed        'hidden'
 					Opened        '' (no class)
@@ -181,7 +181,7 @@
 				<!--
 
 				ADD YOUR SIDE CONTENT ABOVE
-						
+
 				-->
 			</div>
 			<!-- END Side content -->
@@ -207,7 +207,7 @@
 				<!--
 
 				ADD YOUR MAIN CONTENT ABOVE
-						
+
 				-->
 			</div>
 

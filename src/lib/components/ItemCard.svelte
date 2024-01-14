@@ -11,7 +11,7 @@
 	}
 
 	$: bgImage = `//wsrv.nl/?url=${getLargePoster(
-		iscResult(anime) ? '//wsrv.nl/' + anime.image : anime.poster
+		iscResult(anime) ? 'https://m3u8.streamsora.live/' + anime.image : anime.poster
 	)}&w=150&h=230&output=web`;
 
 	$: release_date = iscResult(anime)

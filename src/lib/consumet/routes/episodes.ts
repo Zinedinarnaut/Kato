@@ -10,7 +10,7 @@ export async function getAnilistEpisodes(
 	try {
 		const episodes = await fetchBrowserCachedUrl<Episode[]>(
 			`${PUBLIC_API_URL}/meta/anilist/episodes/${id}?dub=${isDub}` +
-				(isZoro ? '&provider=zoro' : ''),
+				(isZoro ? '&provider=zoro' : 'gogoanime'),
 			900000
 		);
 

@@ -8,8 +8,8 @@ export default function findEpisodeSelectionsIndex(
 		episodes: Episode[];
 	}[]
 ) {
-	let returnNum = 0;
-	for (let i = 0; i < episodeSelections.length; i++) {
+	let returnNum = 1;
+	for (let i = 1; i < episodeSelections.length; i++) {
 		const episodeSelection = episodeSelections[i];
 		const episode = episodeSelection.episodes.find((episode) => episode.number === episodeNumber);
 		if (episode) {

@@ -1,5 +1,5 @@
 import Anify from '$lib/anify';
-import type { EpisodeData } from '$lib/anify/types';
+import type { Episode, EpisodeData } from '$lib/anify/types';
 
 export default async function getAnimeEpisodes(
 	anilist?: string | null,
@@ -16,8 +16,7 @@ export default async function getAnimeEpisodes(
 }
 
 async function getAnimeEpisodesAnilist(id: string): Promise<EpisodeData[]> {
-	return await Anify.Client.get<EpisodeData[]>(`episodes/${id}`);
-	// Update the URL by replacing "{id}" with "${id}"
+	return await Anify.Client.get<EpisodeData[]>(`episodes?id=${id}`);
 }
 
 async function getAnimeEpisodesMAL(id: string): Promise<EpisodeData[]> {

@@ -29,16 +29,6 @@
 		/>
 		<div class="fade" />
 	</div>
-	<!-- {#if isPlayerVisible}
-		<video
-			muted
-			autoplay
-			class="h-[55%] md:h-[75%] w-full opacity-0 absolute duration-250 hero-video fade-in"
-		>
-			<source src="https://proxy.vnxservers.com/youtube/_ce5_P1Hj5A" type="video/mp4" />
-			Your browser does not support HTML video.
-		<x/video>
-	{/if} -->
 	<div class="relative mx-auto container mt-28 md:mt-0 px-10 md:px-14 max-500px:px-0 text-white">
 		<div class={defaultStyle}>
 			<div
@@ -101,9 +91,9 @@
 	<filter id="filter">
 		<feColorMatrix
 			type="matrix"
-			values=" 0.783  0.000  0.000  0.000  0.034 
-               0.000  1.000  0.054  0.000  0.019 
-               0.000  0.054  1.000  0.054  0.019 
+			values=" 0.783  0.000  0.000  0.000  0.034
+               0.000  1.000  0.054  0.000  0.019
+               0.000  0.054  1.000  0.054  0.019
                0.000  0.000  0.000  1.000  0.000"
 		/>
 	</filter>

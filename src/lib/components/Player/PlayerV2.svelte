@@ -82,7 +82,6 @@
 			artRef.switchUrl('https://m3u8.streamsora.live/proxy/m3u8/' + encodeURIComponent(url));
 			artRef.poster =
 				'//wsrv.nl/?url=' +
-				'https://m3u8.streamsora.live/' +
 				episodes[currentEpisode].image +
 				'&w=1476&h=831&output=webp';
 			return;
@@ -95,7 +94,6 @@
 			pip: true,
 			poster:
 				'//wsrv.nl/?url=' +
-				'https://m3u8.streamsora.live/' +
 				episodes[currentEpisode].image +
 				'&w=1476&h=831&output=webp',
 
@@ -431,7 +429,7 @@
 						>
 							<img
 								class="w-full h-full object-cover transition-all delay-100 absolute group-hover:scale-110"
-								src={'//wsrv.nl/?url=https://m3u8.streamsora.live/' +
+								src={'//wsrv.nl/?url=https://image-proxy-zeta.vercel.app/' +
 									`${episode.image}` +
 									'&w=256&h=144&output=webp'}
 								alt=""

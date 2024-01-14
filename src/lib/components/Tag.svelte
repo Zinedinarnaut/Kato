@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="m-4 absolute overflow-hidden {positionY == 'top' ? ' top-0' : ' bottom-0'}{positionX ==
+	class="m-4 absolute overflow-hidden {positionY === 'top' ? ' top-0' : ' bottom-0'}{positionX ===
 	'left'
 		? ' left-0'
 		: ' right-0'} h-8 min-w-28 max-w-36 px-2 gap-2 rounded-xl text-sm text-center justify-center flex items-center {css}"

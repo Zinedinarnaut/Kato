@@ -25,7 +25,7 @@
 	>
 		<img
 			class="object-cover overflow-hidden w-full h-full absolute top-0 left-0 z-0"
-			src="https://proxy.vnxservers.com/{episode.episode_image}"
+			src="//image-proxy-zeta.vercel.app/{episode.episode_image}"
 			alt="{episode.anime_title} Episode {episode.episode}"
 		/>
 		<div

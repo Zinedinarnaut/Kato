@@ -175,8 +175,7 @@ export function initPlayer() {
 		if (introSkipStart !== null && introSkipEnd !== null && get(autoSkip) && !introSkiped) {
 			if (
 				Math.floor(artRef.currentTime) >= introSkipStart &&
-				Math.floor(artRef.currentTime) < introSkipEnd &&
-				introSkipEnd !== null
+				Math.floor(artRef.currentTime) < introSkipEnd
 			) {
 				artRef.currentTime = introSkipEnd;
 				introSkiped = true;
@@ -288,7 +287,7 @@ export async function changeVidSrc(
 				.sort((a, b) => parseInt(b.quality) - parseInt(a.quality))[0]?.url ?? '';
 	}
 
-	await artRef.switchUrl('https://proxy2.vnxservers.com/proxy/m3u8/' + encodeURIComponent(url));
+	await artRef.switchUrl('https://m3u8.streamsora.live/proxy/m3u8/' + encodeURIComponent(url));
 
 	return episode;
 }
@@ -370,7 +369,7 @@ export async function changeVidSrcAnify(
 				.sort((a, b) => parseInt(b.quality) - parseInt(a.quality))[0]?.url ?? '';
 	}
 
-	await artRef.switchUrl('https://proxy2.vnxservers.com/proxy/m3u8/' + encodeURIComponent(url));
+	await artRef.switchUrl('https://m3u8.streamsora.live/proxy/m3u8/' + encodeURIComponent(url));
 
 	return episode;
 }

@@ -11,7 +11,7 @@
 	}
 
 	$: bgImage = `//wsrv.nl/?url=${getLargePoster(
-		iscResult(anime) ? 'https://proxy.vnxservers.com/' + anime.image : anime.poster
+		iscResult(anime) ? '//wsrv.nl/' + anime.image : anime.poster
 	)}&w=150&h=230&output=web`;
 
 	$: release_date = iscResult(anime)

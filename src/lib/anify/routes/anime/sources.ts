@@ -9,6 +9,6 @@ export default async function getAnimeSources(
 	episode: string | number
 ): Promise<Source> {
 	return await Anify.Client.get<Source>(
-		`sources?providerId=${providerId}&watchId=${watchId}&id=${id}&subType=${subType}&episodeNumber=${episode}`
+		`sources?providerId=zoro&watchId=${watchId}&id=${id}&subType=${subType}&episodeNumber=${episode}`
 	);
 }

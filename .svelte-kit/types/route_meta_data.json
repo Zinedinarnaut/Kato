@@ -1,0 +1,65 @@
+{
+	"/(nonauthed)": [
+		"src/routes/(nonauthed)/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(authed)": [
+		"src/routes/(authed)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/": [
+		"src/routes/+layout.server.ts"
+	],
+	"/(nonauthed)/ai": [
+		"src/routes/+layout.server.ts"
+	],
+	"/(nonauthed)/ai/chat": [
+		"src/routes/(nonauthed)/ai/chat/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/api/search": [
+		"src/routes/api/search/+server.ts"
+	],
+	"/(nonauthed)/catalog": [
+		"src/routes/(nonauthed)/catalog/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(nonauthed)/collections": [
+		"src/routes/(nonauthed)/collections/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(nonauthed)/faq": [
+		"src/routes/+layout.server.ts"
+	],
+	"/(nonauthed)/home": [
+		"src/routes/(nonauthed)/home/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(nonauthed)/login": [
+		"src/routes/(nonauthed)/login/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(authed)/profile": [
+		"src/routes/(authed)/profile/+page.server.ts",
+		"src/routes/(authed)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(nonauthed)/schedule": [
+		"src/routes/+layout.server.ts"
+	],
+	"/(nonauthed)/support": [
+		"src/routes/(nonauthed)/support/+page.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(nonauthed)/test/easter": [
+		"src/routes/+layout.server.ts"
+	],
+	"/(nonauthed)/test/[id]/[user]": [
+		"src/routes/(nonauthed)/test/[id]/[user]/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(nonauthed)/watch/[slug]": [
+		"src/routes/(nonauthed)/watch/[slug]/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	]
+}

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getLargePoster } from '$lib/simkl/routes/utils/images';
-	import type { ICollection, IItems } from '$lib/simkl/types/Collection';
+	import type { ICollection } from '$lib/simkl/types/Collection';
 	import CollectionModal from './modals/collectionModal.svelte';
 	export let title: string;
 

@@ -114,7 +114,6 @@
 			pip: true,
 			poster:
 				'//wsrv.nl/?url=' +
-				'https://m3u8.streamsora.live/' +
 				episodes[currentEpisode].image +
 				'&w=1476&h=831&output=webp',
 

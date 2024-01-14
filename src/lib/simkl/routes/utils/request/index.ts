@@ -1,3 +1,4 @@
+// @ts-ignore
 import {CacheGet, CacheSet} from '$lib/utils/cache';
 
 class ApiClient {

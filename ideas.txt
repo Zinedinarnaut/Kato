@@ -1,0 +1,6 @@
+//TODO: add https://www.skeleton.dev/utilities/toasts on add to watchlist and maybe others
+//TODO: fix loader in search popup using {#await}
+//TODO: rework auth
+//TODO: use english titles everywhere
+//TODO: look into reccomendations isnt loading
+//TODO:page transitions
